@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Eleição do Mascote</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="urna">
+
+        <!-- TELA DA URNA -->
+        <section class="tela">
+
+            <header>
+                <h1>ELEIÇÃO DO MASCOTE</h1>
+                <p>ESCOLA ESTADUAL MESTRA ZULMIRA</p>
+            </header>
+
+            <div class="conteudo">
+
+                <!-- INFORMAÇÕES -->
+                <div class="informacoes">
+
+                    <h2>Escolha o novo mascote da escola</h2>
+
+                    <p class="instrucao">
+                        Digite o número do seu mascote:
+                    </p>
+
+                    <div class="numero">
+
+                        <input id="n1" type="text" readonly>
+                        <input id="n2" type="text" readonly>
+
+                    </div>
+
+                    <div id="dadosMascote" class="dados">
+
+                        <h2 id="nomeMascote">
+                            Aguardando voto...
+                        </h2>
+
+                        <h3 id="categoriaMascote"></h3>
+
+                        <p id="descricaoMascote">
+                            Digite o número de um mascote
+                            para conhecer sua proposta.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- IMAGEM -->
+                <div class="imagem">
+
+                    <img
+                        id="fotoMascote"
+                        src="imagens/branco.jpg"
+                        alt="Mascote">
+
+                    <p id="numeroExibido">
+                        Mascote
+                    </p>
+
+                </div>
+
+
+                <!-- MOTIVO / REPRESENTAÇÃO -->
+                <div class="representacao">
+
+                    <strong>
+                        Por que representa nossa escola?
+                    </strong>
+
+                    <p id="motivoMascote"></p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RODAPÉ -->
+            <footer>
+
+                <p>
+                    Confira as informações antes de confirmar seu voto.
+                </p>
+
+            </footer>
+
+        </section>
+
+
+        <!-- TECLADO -->
+        <section class="teclado">
+
+            <div class="teclas">
+
+                <button onclick="digitar(1)">1</button>
+                <button onclick="digitar(2)">2</button>
+                <button onclick="digitar(3)">3</button>
+
+                <button onclick="digitar(4)">4</button>
+                <button onclick="digitar(5)">5</button>
+                <button onclick="digitar(6)">6</button>
+
+                <button onclick="digitar(7)">7</button>
+                <button onclick="digitar(8)">8</button>
+                <button onclick="digitar(9)">9</button>
+
+                <button onclick="branco()" class="btn-branco">
+                    BRANCO
+                </button>
+
+                <button onclick="digitar(0)">0</button>
+
+                <button onclick="corrigir()" class="btn-corrige">
+                    CORRIGE
+                </button>
+
+                <button
+                    onclick="confirmar()"
+                    class="btn-confirma">
+
+                    CONFIRMA
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MENSAGEM -->
+    <div id="mensagem" class="mensagem">
+
+        <div class="mensagem-conteudo">
+
+            <h2 id="tituloMensagem">
+                Voto confirmado!
+            </h2>
+
+            <p id="textoMensagem"></p>
+
+            <button onclick="fecharMensagem()">
+                OK
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

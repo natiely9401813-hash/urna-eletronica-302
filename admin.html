@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Administração - Eleição do Mascote</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div>
+
+            <h1>Apuração da Eleição</h1>
+
+            <p>
+                Eleição do Mascote da Escola
+            </p>
+
+        </div>
+
+        <button
+            class="btn-atualizar"
+            onclick="atualizarApuracao()">
+
+            ↻ Atualizar
+
+        </button>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <!-- RESUMO -->
+
+        <section class="resumo">
+
+            <div class="card-resumo">
+
+                <span>Total de votos</span>
+
+                <strong id="totalVotos">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="card-resumo">
+
+                <span>Votos válidos</span>
+
+                <strong id="votosValidos">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="card-resumo">
+
+                <span>Votos em branco</span>
+
+                <strong id="votosBrancos">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="card-resumo">
+
+                <span>Votos nulos</span>
+
+                <strong id="votosNulos">
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- VENCEDOR -->
+
+        <section class="vencedor">
+
+            <div>
+
+                <span class="titulo-vencedor">
+                    🏆 MASCOTE MAIS VOTADO
+                </span>
+
+                <h2 id="nomeVencedor">
+                    Aguardando votação
+                </h2>
+
+                <p id="descricaoVencedor">
+                    Ainda não há votos registrados.
+                </p>
+
+            </div>
+
+            <div class="percentual">
+
+                <strong id="percentualVencedor">
+                    0%
+                </strong>
+
+                <span>
+                    dos votos válidos
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADOS -->
+
+        <section class="resultados">
+
+            <div class="titulo-secao">
+
+                <div>
+
+                    <h2>
+                        Resultado da votação
+                    </h2>
+
+                    <p>
+                        Quantidade de votos por mascote
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="listaResultados">
+
+                <!-- Resultados serão inseridos
+                     pelo JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTROLES -->
+
+        <section class="controles">
+
+            <h2>Administração</h2>
+
+            <div class="botoes-admin">
+
+                <button
+                    onclick="exportarResultado()"
+                    class="btn-exportar">
+
+                    📄 Exportar resultado
+
+                </button>
+
+
+                <button
+                    onclick="zerarVotacao()"
+                    class="btn-zerar">
+
+                    🗑 Zerar votação
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- MODAL -->
+
+    <div
+        id="modal"
+        class="modal">
+
+        <div class="modal-conteudo">
+
+            <h2 id="modalTitulo">
+                Atenção
+            </h2>
+
+            <p id="modalTexto"></p>
+
+            <div class="modal-botoes">
+
+                <button
+                    onclick="fecharModal()">
+
+                    Cancelar
+
+                </button>
+
+                <button
+                    id="btnConfirmarModal"
+                    class="confirmar">
+
+                    Confirmar
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
+```

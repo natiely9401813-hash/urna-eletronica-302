@@ -1,0 +1,516 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f1f4f5;
+
+    color: #222;
+
+}
+
+
+/* CABEÇALHO */
+
+.cabecalho {
+
+    background: #1b1f43;
+
+    color: white;
+
+    padding: 25px 5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.cabecalho h1 {
+
+    margin: 0;
+
+    font-size: 30px;
+
+}
+
+.cabecalho p {
+
+    margin: 5px 0 0;
+
+    opacity: .8;
+
+}
+
+.btn-atualizar {
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 6px;
+
+    background: white;
+
+    color: #1c1b43;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+/* CONTAINER */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 30px auto;
+
+}
+
+
+/* RESUMO */
+
+.resumo {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+.card-resumo {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.08);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+.card-resumo span {
+
+    color: #666;
+
+    font-size: 14px;
+
+}
+
+.card-resumo strong {
+
+    font-size: 32px;
+
+    color: #1b1f43;
+
+}
+
+
+/* VENCEDOR */
+
+.vencedor {
+
+    margin-top: 25px;
+
+    padding: 30px;
+
+    background: #d8e4f3;
+
+    border-left:
+        8px solid #2d3d6a;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.titulo-vencedor {
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #2d406a;
+
+}
+
+.vencedor h2 {
+
+    margin: 10px 0;
+
+    font-size: 32px;
+
+}
+
+.vencedor p {
+
+    max-width: 700px;
+
+    line-height: 1.5;
+
+}
+
+.percentual {
+
+    text-align: center;
+
+}
+
+.percentual strong {
+
+    display: block;
+
+    font-size: 45px;
+
+    color: #1f1b43;
+
+}
+
+.percentual span {
+
+    font-size: 13px;
+
+    color: #555;
+
+}
+
+
+/* RESULTADOS */
+
+.resultados {
+
+    margin-top: 25px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.08);
+
+}
+
+.titulo-secao h2 {
+
+    margin: 0;
+
+}
+
+.titulo-secao p {
+
+    color: #666;
+
+}
+
+
+/* RESULTADO INDIVIDUAL */
+
+.resultado {
+
+    margin-top: 25px;
+
+}
+
+.resultado-topo {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.info-mascote {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+.info-mascote img {
+
+    width: 60px;
+
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid #ddd;
+
+}
+
+.info-mascote h3 {
+
+    margin: 0;
+
+}
+
+.info-mascote span {
+
+    color: #777;
+
+    font-size: 13px;
+
+}
+
+.votos {
+
+    font-weight: bold;
+
+    font-size: 20px;
+
+}
+
+
+/* BARRA */
+
+.barra {
+
+    width: 100%;
+
+    height: 25px;
+
+    background: #e5e5e5;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-top: 10px;
+
+}
+
+.barra-preenchida {
+
+    height: 100%;
+
+    background: #2d3d6a;
+
+    border-radius: 20px;
+
+    transition:
+        width .5s ease;
+
+}
+
+.porcentagem {
+
+    margin-top: 5px;
+
+    font-size: 13px;
+
+    color: #666;
+
+}
+
+
+/* CONTROLES */
+
+.controles {
+
+    margin-top: 25px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+}
+
+.botoes-admin {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+.botoes-admin button {
+
+    padding: 14px 22px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+.btn-exportar {
+
+    background: #1b2243;
+
+    color: white;
+
+}
+
+.btn-zerar {
+
+    background: #c62828;
+
+    color: white;
+
+}
+
+
+/* MODAL */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0,0,0,.6);
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.modal-conteudo {
+
+    width: 400px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+}
+
+.modal-botoes {
+
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+}
+
+.modal-botoes button {
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+}
+
+.confirmar {
+
+    background: #c62828;
+
+    color: white;
+
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+
+    .resumo {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+    .vencedor {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .resumo {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .botoes-admin {
+
+        flex-direction: column;
+
+    }
+
+    .cabecalho {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+}
+
